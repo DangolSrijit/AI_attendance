@@ -42,9 +42,6 @@ class UsersRepository:
 users_repository = UsersRepository()
 
 @app.route('/')
-@app.route('/hello')
-def index():
-    return "<h2>Hello World</h2>"
 
 @app.route('/home')
 @login_required
@@ -67,17 +64,7 @@ def login():
 
     return render_template('login.html')
 
-@app.route('/register', methods=['GET', 'POST'])
-def register():
-    if request.method == 'POST':
-        username = request.form['username']
-        password = request.form['password']
-        new_user = User(username, password, users_repository.next_index())
-        users_repository.save_user(new_user)
-        flash('Registered successfully. Please log in.', 'success')
-        return redirect(url_for('login'))
 
-    return render_template('register.html')
 
 @app.route('/logout')
 @login_required
@@ -98,4 +85,4 @@ def load_user(userid):
     return users_repository.get_user_by_id(userid)
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=8000, debug=True)
+    app.run(host='172.16.3.53', port=8080, debug=True)
