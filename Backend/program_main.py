@@ -7,7 +7,7 @@ import os
 
 video_capture = cv2.VideoCapture(0)
 
-shrayash_image = face_recognition.load_image_file("photos/shrayash.jpg")
+shrayash_image = face_recognition.load_image_file("C:/Users/kckcb/Desktop/HackFest/AI_attendance/Backend/photos/biden.jpg")
 shrayash_encoding = face_recognition.face_encodings(shrayash_image)[0]
 known_face_encoding = [shrayash_encoding]
 
@@ -56,3 +56,11 @@ while True:
                         current_time = now.strftime("%H-%M_%S")
                         lnwriter.writerow([name, current_time])
         s = False 
+
+        cv2.imshow("attendance system", frame)
+    if cv2.waitKey(1) & 0xFF == ord('q'):
+        break
+
+video_capture.release()
+cv2.destroyAllWindows()
+f.close()
