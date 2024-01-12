@@ -13,13 +13,13 @@
         <div class="login__container" id="login__container">
                 <div class="login-form">
                 <div class="login-form__logo-container">
-                    <img src="ai-logo-transparent.png" class="login-form__logo">
+                    <img src="../static/img/ai-logo-transparent.png" class="login-form__logo">
                 </div>
                 <p class="login-form__heading-text">Admin Login</p>
                 <p class="login-form__second-text">Your gateway to smart attendance management!</p>
             
                 <div>
-                    <form method="post" action="action={{ url_for('login') }}" class="login__actual-form">
+                    <form method="post" action = "{{ url_for('dashboard') }}" class="login__actual-form">
                         <div class="login-form__inputs">
                             <input type="text" name="email_username" placeholder="Email or Username*" class="email-input">
                         </div>
@@ -35,6 +35,6 @@
             </div>
         </div>
     </div>
-    <script src="js/login.js"></script>
+    <script src="../static/js/login.js"></script>
 </body>
 </html>
