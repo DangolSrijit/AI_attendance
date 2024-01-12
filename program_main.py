@@ -19,5 +19,8 @@ students = known_face_names.copy()
 face_locations = []
 face_encoding = []
 face_names = []
-s = True
+s = True 
+
+now = datetime.now()
+current_date = now.strftime("%Y-%m-%d")
 
