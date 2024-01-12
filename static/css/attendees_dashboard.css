@@ -45,7 +45,14 @@ nav img {
 }
 .UserDetails{
     height: 600px;
-    background-color: aquamarine;
+    background-color: #294965;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.UserDetails__heading{
+    font-weight: 500;
+    font-size: 1.9rem;
 }
 .hero{
     display: grid;
@@ -60,3 +67,29 @@ video {
     display: block;
     
 }
+button {
+    padding: 10px;
+    margin-top: 3px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#startCameraBtn {
+    margin-left: 50px;
+    background-color: #29323C;
+    color: #fff;
+    border-radius: 10px;
+}
+
+#stopCameraBtn {
+    background-color: #e74c3c;
+    color: #fff;
+    border-radius: 10px;
+}
+
+#stopCameraBtn:disabled {
+    background-color:#29323C;
+    cursor: not-allowed;
+    color: #fff;
+}
+
