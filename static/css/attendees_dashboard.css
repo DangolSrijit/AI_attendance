@@ -18,19 +18,17 @@ nav {
 }
 
 .menu a {
-  
-  
     color: white;
     text-align: center;
-    padding: 14px 16px;
+    margin: 14px 16px;
     text-decoration: none;
     padding-right: 100px;
    
 }
 
 nav a:hover {
-    background-color: #ddd;
-    color: black;
+    /* background-color: #ddd; */
+    color:#9FADBD ;
 }
 
 nav img {
@@ -39,4 +37,26 @@ nav img {
     max-width: 100%;
     height: 50px;
     padding-left: 50px;
+}
+
+.camera{
+    height: 600px;
+    /* background-color: bisque; */
+}
+.UserDetails{
+    height: 600px;
+    background-color: aquamarine;
+}
+.hero{
+    display: grid;
+    grid-template-columns: 58% 38%;
+    justify-content: space-around;
+    margin-top: 3vh;
+    /* column-gap: 4%; */
+}
+video {
+    width: 100%;
+    height: 100%;
+    display: block;
+    
 }
