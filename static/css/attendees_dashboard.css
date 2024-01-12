@@ -48,15 +48,12 @@ nav img {
     background-color: #294965;
     display: flex;
     justify-content: center;
-    align-items: center;
+    /* align-items: center; */
 }
-.UserDetails__heading{
-    font-weight: 500;
-    font-size: 1.9rem;
-}
+
 .hero{
     display: grid;
-    grid-template-columns: 58% 38%;
+    grid-template-columns: 65% 31%;
     justify-content: space-around;
     margin-top: 3vh;
     /* column-gap: 4%; */
@@ -92,4 +89,25 @@ button {
     cursor: not-allowed;
     color: #fff;
 }
-
+.Profile_image{
+    margin-top: 5vh;
+}
+.Profile_image img{
+    height: 150px;
+}
+.sri{
+    display: flex;
+    justify-content: center;
+}
+.sri > div > div >p{
+    color: white;
+    font-size: 1.3rem;
+}
+.UserDetails__heading{
+    font-weight: 500;
+    color: #9FADBD;
+    font-size: 1.9rem!important;
+}
+.hey{
+    margin-left: -4rem;
+}
