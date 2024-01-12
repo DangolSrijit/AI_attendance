@@ -1,12 +1,19 @@
-from flask import Flask, render_template, url_for, redirect
+from flask import Flask, render_template, url_for, redirect, Response
 from flask_sqlalchemy import SQLAlchemy
 from flask_login import UserMixin, login_user, LoginManager, login_required, logout_user, current_user
 from flask_wtf import FlaskForm
 from wtforms import StringField, PasswordField, SubmitField
 from wtforms.validators import InputRequired, Length, ValidationError
 from flask_bcrypt import Bcrypt
+import sqlite3
+import cv2
+import subprocess
+
+
+
 
 app = Flask(__name__)
+
 
 bcrypt = Bcrypt(app)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///database.db'
@@ -85,7 +92,6 @@ def login():
 def dashboard():
     return render_template('admin_dashboard.html')
 
-
 @app.route('/logout', methods=['GET', 'POST'])
 @login_required
 def logout():
@@ -104,6 +110,25 @@ def register():
 
     return render_template('register.html', form=form)
 
+
+#@ app.route('/attendees_dashboard')
+#def attendees_dashboard():
+#   return render_template('attendees_dashboard.html')
+
+#connect to DB
+conn = sqlite3.connect('database.db')
+
+@app.route('/')
+def index():
+     return render_template('admin_dashboard.html')
+
+@app.route('/admin_dashboard', methods=['POST'])
+def run_python_script():
+     result = subprocess.check_output(['python', 'train.py'], universal_newlines=True)
+     return result
+
+
+   
 
 if __name__ == "__main__":
     with app.app_context():

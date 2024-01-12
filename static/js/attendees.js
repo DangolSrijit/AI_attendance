@@ -30,5 +30,6 @@ document.addEventListener('DOMContentLoaded', () => {
         stopCameraBtn.disabled = true;
       }
     }
+
   });
-  
+   

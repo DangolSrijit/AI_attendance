@@ -4,6 +4,14 @@ for (var i = 0; i < arrow.length; i++) {
  let arrowParent = e.target.parentElement.parentElement;//selecting main parent of arrow
  arrowParent.classList.toggle("showMenu");
   });
+  function runScript() {
+    fetch('/admin_dashboard', { method: 'POST' })
+        .then(response => response.text())
+        .then(output => {
+            document.getElementById('output').innerText = output;
+        });
+}
+
 }
 
 let sidebar = document.querySelector(".sidebar");
