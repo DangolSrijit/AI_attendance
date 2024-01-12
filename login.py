@@ -13,10 +13,11 @@ import pickle
 import numpy as np
 import os
 from datetime import datetime
+from test import FaceCapture
 
 app = Flask(__name__)
 camera = Attendance()
-
+camera2=FaceCapture()
 bcrypt = Bcrypt(app)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///database.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False 
@@ -195,10 +196,11 @@ def train():
         faces=np.append(faces, faces_data, axis=0)
         with open('data/faces_data.pkl', 'wb') as f:
             pickle.dump(faces, f)
+    return frame
             
 def generate_frames_1():
     while True:
-        frame = camera.get_frame()
+        frame =camera2.get_frame()
         ret, jpeg = cv2.imencode('.jpg', frame)
         frame_bytes = jpeg.tobytes()
         yield (b'--frame\r\n'

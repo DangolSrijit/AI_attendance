@@ -12,7 +12,7 @@ class Attendance:
     def __init__(self):
         self.video = cv2.VideoCapture(0) # put 0 for webcam or url for ip camera ( camera app : ip webcam)
         self.facedetect = cv2.CascadeClassifier('data/haarcascade_frontalface_default.xml')
-
+        
         with open('data/names.pkl', 'rb') as w:
             self.LABELS = pickle.load(w)
         with open('data/faces_data.pkl', 'rb') as f:
