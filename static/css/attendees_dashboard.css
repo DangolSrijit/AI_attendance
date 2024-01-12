@@ -45,7 +45,14 @@ nav img {
 }
 .UserDetails{
     height: 600px;
-    background-color: aquamarine;
+    background-color: #294965;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.UserDetails__heading{
+    font-weight: 500;
+    font-size: 1.9rem;
 }
 .hero{
     display: grid;
@@ -69,7 +76,7 @@ button {
 
 #startCameraBtn {
     margin-left: 50px;
-    background-color: #3498db;
+    background-color: #29323C;
     color: #fff;
     border-radius: 10px;
 }
@@ -81,7 +88,7 @@ button {
 }
 
 #stopCameraBtn:disabled {
-    background-color: #3498db;
+    background-color:#29323C;
     cursor: not-allowed;
     color: #fff;
 }
