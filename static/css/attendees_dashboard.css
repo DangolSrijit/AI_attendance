@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: rgb(46, 39, 39);
+}body {
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    background-color: rgb(41,50,60);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.menu a {
+  
+  
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    padding-right: 100px;
+   
+}
+
+nav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+nav img {
+    
+    margin: 8px auto;
+    max-width: 100%;
+    height: 50px;
+    padding-left: 50px;
+}
