@@ -24,3 +24,13 @@ s = True
 now = datetime.now()
 current_date = now.strftime("%Y-%m-%d")
 
+f = open(current_date + '.csv', 'w+', newline='')
+lnwriter = csv.writer(f)
+
+while True:
+    ret, frame = video_capture.read()
+    
+    if not ret:
+        print("Failed to capture frame. Exiting...")
+        break
+
