@@ -6,9 +6,6 @@ from wtforms import StringField, PasswordField, SubmitField
 from wtforms.validators import InputRequired, Length, ValidationError
 from flask_bcrypt import Bcrypt
 
-
-
-
 app = Flask(__name__)
 
 bcrypt = Bcrypt(app)
@@ -84,7 +81,7 @@ def login():
     return render_template('login.html', form=form)
 
 @app.route('/dashboard', methods=['GET', 'POST'])
-#@login_required
+@login_required
 def dashboard():
     return render_template('admin_dashboard.html')
 
