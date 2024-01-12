@@ -7,7 +7,7 @@ import os
 
 video_capture = cv2.VideoCapture(0)
 
-shrayash_image = face_recognition.load_image_file("biden.jpg")
+shrayash_image = face_recognition.load_image_file("AI_attendance/Backend/photos/biden.jpg")
 shrayash_encoding = face_recognition.face_encodings(shrayash_image)[0]
 
 known_face_encoding = [shrayash_encoding]
@@ -19,7 +19,7 @@ students = known_face_names.copy()
 face_locations = []
 face_encoding = []
 face_names = []
-s = True 
+s = True
 
 now = datetime.now()
 current_date = now.strftime("%Y-%m-%d")
@@ -34,3 +34,5 @@ while True:
         print("Failed to capture frame. Exiting...")
         break
 
+    small_frame = cv2.resize(frame, (0, 0), fx=0.25, fy=0.25)
+    rgb_small_frame = small_frame[:, :, ::-1]
