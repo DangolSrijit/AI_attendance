@@ -7,5 +7,17 @@ import os
 
 video_capture = cv2.VideoCapture(0)
 
-shrayash_image = face_recognition.load_image_file("photos/shrayash.jpg")
+shrayash_image = face_recognition.load_image_file("biden.jpg")
 shrayash_encoding = face_recognition.face_encodings(shrayash_image)[0]
+
+known_face_encoding = [shrayash_encoding]
+
+known_face_names = ["biden"]
+
+students = known_face_names.copy()
+
+face_locations = []
+face_encoding = []
+face_names = []
+s = True
+
