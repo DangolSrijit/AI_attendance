@@ -11,9 +11,9 @@
 <body>
   <div class="sidebar close">
     <div class="logo-details">
-      <img class="logo_name" src="../static/img/ai-logo-transparent.png" alt="logo">
+      <img class="logo_name" src="../static/img/logo-white-transparent.png" alt="logo">
     </div>
-    <hr color="white">
+    <!-- <hr color="white"> -->
     <ul class="nav-links">
       <li>
         <a href="#">
@@ -40,7 +40,8 @@
       </li>
       <li>
         <a href="#">
-          <i class='bx bx-question-mark' ></i>
+          <!-- <i class='bx bx-question-mark' ></i> -->
+          <i class='bx bxs-file-doc' ></i>
           <span class="link_name">Register</span>
         </a>
         <ul class="sub-menu blank">
@@ -49,7 +50,8 @@
       </li>
       <li>
         <a href="#">
-          <i class='bx bx-file'></i>
+          <i class='bx bxs-user-detail' ></i>
+          <!-- <i class='bx bx-file'></i> -->
           <span class="link_name">Attendee</span>
         </a>
         <ul class="sub-menu blank">
@@ -74,6 +76,42 @@
         <span>Admin</span>
       </div>
     </div>
+    
+    <div class="register">      
+      <div class="register-form">
+        <div class="register-heading">
+          Register Attendee
+       </div>
+       <hr >
+       <form action="">
+          <div>
+              <div class="form-field ">
+                <p>Name</p>
+                <input type="text">
+              </div>
+              <div class="form-field">
+                <p>Phone</p>
+                <input type="number">
+              </div>
+              <div class="form-field">
+                <p>ID</p>
+                <input type="text">
+              </div>
+              <div class="form-field">
+                <p>Department</p>
+                <input type="text">
+              </div>
+              <div class="form-field">
+                <input type="button" value="Scan Attendee">
+              </div>           
+              <div class="form-field">
+                <input type="submit" >
+              </div>
+          </div>
+       </form>
+      </div>
+    </div>
+
   </section>
   <script src="../static/js/admin_dashboard.js"></script>
 
