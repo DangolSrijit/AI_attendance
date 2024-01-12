@@ -7,7 +7,7 @@ import os
 
 video_capture = cv2.VideoCapture(0)
 
-shrayash_image = face_recognition.load_image_file("AI_attendance/static/img/biden.jpg")
+shrayash_image = face_recognition.load_image_file("static/img/biden.jpg")
 shrayash_encoding = face_recognition.face_encodings(shrayash_image)[0]
 
 known_face_encoding = [shrayash_encoding]
@@ -36,6 +36,7 @@ while True:
 
     small_frame = cv2.resize(frame, (0, 0), fx=0.25, fy=0.25)
     rgb_small_frame = small_frame[:, :, ::-1]
+
     if s:
         face_locations = face_recognition.face_locations(rgb_small_frame)
         face_encodings = face_recognition.face_encodings(rgb_small_frame, face_locations)
@@ -56,3 +57,11 @@ while True:
                         current_time = now.strftime("%H-%M_%S")
                         lnwriter.writerow([name, current_time])
         s = False  
+
+    cv2.imshow("attendance system", frame)
+    if cv2.waitKey(1) & 0xFF == ord('q'):
+        break
+
+video_capture.release()
+cv2.destroyAllWindows()
+f.close()
