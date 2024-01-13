@@ -21,7 +21,7 @@ body {
     align-items: center;
     justify-content: center;
     height: 100vh;
-    background-color: rgb(41,50,60);
+    background: radial-gradient(circle,#172c38,#201f2e);
 }
 a{
     text-decoration: none;
@@ -44,15 +44,16 @@ span{
     animation: scaleUpDown 2s ease-in-out infinite alternate;
 }
 #header{
-    margin-bottom: 50px;
+    margin-bottom: 30px;
+    margin-top: 20px;
 }
 
 /* login section */
 
 #login{
     display: grid;
-    grid-template-columns: 30% 30%;
-    margin-top: 20px;
+    grid-template-columns: 25% 25%;
+    margin-top: 10px;
     justify-content: center;
     width: 100%;
     height: 400px;
@@ -62,36 +63,59 @@ span{
     margin: 0;
     padding: 10px;
     border: 1px solid #231a1a;
-    border-radius: 5px;
     position: relative;
     cursor: pointer;
     transition:transform .3s ease;
     display: flex;
     justify-content: center;
-    border-radius: 10%;
+    border-radius: 20px;
     overflow: hidden;
+    z-index: 0;
+    background-color:#151423;
 }
 .login-container:hover {
     transform:scale(1.02,1.02) ;
+    border: 1px solid #08edb1;
     
 }
 .login-container:hover .heading{
-    color: rgb(163, 46, 46);
+    color: #08edb1;
     
 }
 .login-container__img{
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
+    width: 100%; 
     position:absolute;
     top: 0;
     left: 0;
     z-index: -1;
-    background-color: #b3e1d6;
+    background-color: #151423;
 }
 .heading{
+    margin-top: 30px;
     font-size: 23px;    
     transition:transform .3s ease;
+    color: white;
+}
+.modify{
+    height: 250px;
+    width: 250px;
+    left: auto;
+    right: auto;
+    margin-top: 90px;
+}
+.modifer{
+    margin-top: 90px;
+}
+.logo{
+    height: 5rem;
+    width: 100%;
+    position: absolute;
+    top: 30px;
+}
+.logo img{
+    height: 5rem;
+    margin-left: 50px;
+    margin-bottom: 20px;
 }
 @keyframes scaleUpDown {
     0% {
