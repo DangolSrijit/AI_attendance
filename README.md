@@ -22,7 +22,7 @@ This project introduces an artificial intelligence-based attendance management s
 + Go to the url localhost:5000 on your browser.
 
 ### Technologies & Frameworks
-## Attendance Receiver - Face Scanner (Python)
+# Attendance Receiver - Face Scanner (Python)
 + Python 3.11.4 - Main programming language.
 + OpenCV - for computer vision.
 + Haar cascade face detection - K-Nearest Neighbors (KNN) Algorithm for face recoggnition.
@@ -34,4 +34,4 @@ This project introduces an artificial intelligence-based attendance management s
 + Real-Time Updates
 + Adaptability to Different Environments
 
-### Conclusion
+
