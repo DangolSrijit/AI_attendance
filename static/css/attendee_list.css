@@ -16,7 +16,7 @@ body{
   left: 0;
   height: 100%;
   width: 260px;
-  background: rgb(41, 50, 60);;
+  background: radial-gradient(circle,#172c38,#201f2e);
   z-index: 100;
   transition: all 0.5s ease;
 }
@@ -232,7 +232,7 @@ body{
   width: calc(100% - 78px);
 }
 .header-dashboard{
-  background-color:  #9FADBD;
+  background-color:  #21344d;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -243,13 +243,18 @@ body{
   align-items: center;
   flex-wrap: wrap;
   justify-content: end;
+  cursor: pointer;
 }
 .home-content span{
-  background-color: white;
+  background-color:#08edb1;
   padding: 0.2rem 0.3rem;
   border-radius: 0.4rem;
   font-size: 1rem;
+  color:white;
 }
+.home-content span:hover{
+  color:#08edb1;
+  background-color: white;
 .bx-menu{
   cursor: pointer;
   margin-right: 10px;
