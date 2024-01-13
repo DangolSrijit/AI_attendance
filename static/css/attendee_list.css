@@ -16,7 +16,7 @@ body{
   left: 0;
   height: 100%;
   width: 260px;
-  background: rgb(41, 50, 60);;
+  background: rgb(41, 50, 60);
   z-index: 100;
   transition: all 0.5s ease;
 }
