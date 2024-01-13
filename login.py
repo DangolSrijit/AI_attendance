@@ -200,11 +200,7 @@ def train():
             
 def generate_frames_1():
     while True:
-<<<<<<< HEAD
-        frame = train.get_frame()
-=======
         frame =camera2.get_frame()
->>>>>>> 5a635eb9a3ff3ee1527496f27fb3e5fbfd507db5
         ret, jpeg = cv2.imencode('.jpg', frame)
         frame_bytes = jpeg.tobytes()
         yield (b'--frame\r\n'

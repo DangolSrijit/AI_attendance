@@ -1,5 +1,5 @@
 # Attendence System with Face Recognition
-#Introduction
+# Introduction
 Attendance Management is a crucial aspect of keeping track of employee or student attendance details. It involves documenting the time employees or students spend working or taking time off. In the current digital era, face recognition systems have become indispensable in various sectors. Face recognition, a widely-used biometric technology, serves purposes such as security, authentication, and identification.
 
 This project introduces an artificial intelligence-based attendance management system with face recognition technology. The primary objective is to update attendance records using employees' facial features through computer vision.
